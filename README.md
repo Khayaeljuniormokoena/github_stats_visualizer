@@ -1,5 +1,11 @@
 GitHub Stats Visualizer
 
+My Stats
+
+[![](https://raw.githubusercontent.com/Khayaeljuniormokoena/Github-Stats-Visualizer-project/master/profile-summary-card-output/moonlight/0-profile-details.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+[![](https://raw.githubusercontent.com/Khayaeljuniormokoena/Github-Stats-Visualizer-project/master/profile-summary-card-output/moonlight/1-repos-per-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/Khayaeljuniormokoena/Github-Stats-Visualizer-project/master/profile-summary-card-output/moonlight/2-most-commit-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+[![](https://raw.githubusercontent.com/Khayaeljuniormokoena/Github-Stats-Visualizer-project/master/profile-summary-card-output/moonlight/3-stats.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/Khayaeljuniormokoena/Github-Stats-Visualizer-project/master/profile-summary-card-output/moonlight/4-productive-time.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
+
 Introduction
 GitHub Stats Visualizer is a web application that helps you visualize statistics related to your GitHub repositories. It provides insights into commit history, code contributions, pull requests, and issue tracking. With interactive charts and graphs, you can gain valuable insights into your GitHub activity.
 
