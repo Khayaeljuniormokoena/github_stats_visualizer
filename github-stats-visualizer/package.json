@@ -1,0 +1,11 @@
+{
+  "name": "github-stats-visualizer",
+  "version": "1.0.0",
+  "description": "A web application to visualize GitHub statistics.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
