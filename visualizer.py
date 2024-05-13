@@ -13,9 +13,8 @@ class Visualizer:
         self.__owner = owner
         self.__repo = repo
 
-        # Initialize the Downloader class without the figsize parameter
-        self.__downloader = Downloader(owner, repo, token=getenv('GITHUB_OAUTH_TOKEN'), useCache=useCache, verbose=False)
-
+        # Initialize the Downloader class without the useCache parameter
+        self.__downloader = Downloader(owner, repo, token=getenv('GITHUB_OAUTH_TOKEN'), verbose=False)
 
     def __fig_title(self, title):
         '''Extends the figure title with the name of the owner and the repository.'''
@@ -152,7 +151,7 @@ class Visualizer:
         plt.ylabel('Stars')
         plt.show()
 
-    def commit_activity(self, limit=10):
+    def commit_activity(self):
         '''Plots a grid/mesh plot about the commit activity in the repository during the last year.'''
 
         commit_activity = self.__downloader.get_commit_activity()
