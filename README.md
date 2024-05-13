@@ -21,9 +21,11 @@ To use the GitHub Stats Visualizer:
 
 1. Clone this repository to your local machine.
 2. Install the required Python packages by running `pip install -r requirements.txt`.
-3. Modify the `main.py` file to specify the repository owner and name, as well as the desired visualization type.
-4. Run `python main.py` to generate the visualization.
-5. View the generated visualization in the output.
+   - pip install requests pandas matplotlib
+   - pip freeze > requirements.txt
+4. Modify the `main.py` file to specify the repository owner and name, as well as the desired visualization type.
+5. Run `python main.py` to generate the visualization.
+6. View the generated visualization in the output.
 
 ## Dependencies
 
