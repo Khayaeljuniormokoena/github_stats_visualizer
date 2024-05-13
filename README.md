@@ -1,52 +1,48 @@
 GitHub Stats Visualizer
 
+GitHub Stats Visualizer is a tool for generating visualizations of GitHub repository statistics, such as code frequency, commit activity, contributors, and stargazer history.
+
+## Overview
+
+This project consists of two main components:
+
+1. **Downloader**: A Python script (`downloader.py`) responsible for fetching data from the GitHub API and caching it locally.
+2. **Visualizer**: Another Python script (`visualizer.py`) that uses the downloaded data to generate various visualizations, such as line charts, pie charts, and grid plots.
+
+## Features
+
+- Retrieve statistics about a GitHub repository, including code frequency, commit activity, contributors, issues, and stargazers.
+- Generate visualizations of the retrieved data to gain insights into the repository's development history and community engagement.
+- Customize the visualizations by specifying parameters such as repository owner, repository name, and visualization type.
+
+## Usage
+
+To use the GitHub Stats Visualizer:
+
+1. Clone this repository to your local machine.
+2. Install the required Python packages by running `pip install -r requirements.txt`.
+3. Modify the `main.py` file to specify the repository owner and name, as well as the desired visualization type.
+4. Run `python main.py` to generate the visualization.
+5. View the generated visualization in the output.
+
+## Dependencies
+
+The GitHub Stats Visualizer relies on the following Python libraries:
+
+- `requests`: For making HTTP requests to the GitHub API.
+- `pandas`: For data manipulation and analysis.
+- `matplotlib`: For generating visualizations such as line charts, pie charts, and grid plots.
+
+## Contribution
+
+Contributions to the GitHub Stats Visualizer project are welcome! If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
 My Stats
 
 [![](https://raw.githubusercontent.com/Khayaeljuniormokoena/Github-Stats-Visualizer-project/master/profile-summary-card-output/moonlight/0-profile-details.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
 [![](https://raw.githubusercontent.com/Khayaeljuniormokoena/Github-Stats-Visualizer-project/master/profile-summary-card-output/moonlight/1-repos-per-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/Khayaeljuniormokoena/Github-Stats-Visualizer-project/master/profile-summary-card-output/moonlight/2-most-commit-language.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
 [![](https://raw.githubusercontent.com/Khayaeljuniormokoena/Github-Stats-Visualizer-project/master/profile-summary-card-output/moonlight/3-stats.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards) [![](https://raw.githubusercontent.com/Khayaeljuniormokoena/Github-Stats-Visualizer-project/master/profile-summary-card-output/moonlight/4-productive-time.svg)](https://github.com/vn7n24fzkq/github-profile-summary-cards)
-
-Introduction
-GitHub Stats Visualizer is a web application that helps you visualize statistics related to your GitHub repositories. It provides insights into commit history, code contributions, pull requests, and issue tracking. With interactive charts and graphs, you can gain valuable insights into your GitHub activity.
-
-Deployed Site:
-Final Project Blog Article:
-Author(s) LinkedIn:
-
-Installation
-To install GitHub Stats Visualizer locally, follow these steps:
-
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/your-username/github-stats-visualizer.git
-Navigate to the project directory:
-bash
-Copy code
-cd github-stats-visualizer
-Install dependencies:
-Copy code
-npm install
-Start the development server:
-sql
-Copy code
-npm start
-
-Usage
-To use GitHub Stats Visualizer:
-
-Visit the deployed site: GitHub Stats Visualizer
-Log in with your GitHub account.
-Explore the different tabs to view commit history, code contributions, pull requests, and issue tracking statistics.
-Interact with the charts and graphs to gain insights into your GitHub activity.
-
-Contributing
-We welcome contributions from the community. To contribute to GitHub Stats Visualizer, please follow these guidelines:
-
-Fork the repository.
-Create a new branch for your feature or bug fix.
-Make your changes and ensure they pass all tests.
-Commit your changes and push to your fork.
-Submit a pull request with a clear description of your changes.
-
-This README.md provides a comprehensive overview of the GitHub Stats Visualizer project, including installation instructions, usage guidelines, contribution guidelines, related projects, licensing information, and additional resources for reference.
