@@ -40,7 +40,11 @@ class Visualizer:
         # Total lines over time - line chart
         plt.figure(figsize=self.__figsize)
         plt.plot(dates, cum_total)
-        plt.fill_between(dates, cum_total, alpha=0.2)
+
+        # Replace NaN values with zero before filling
+        cum_total_masked = np.ma.masked_invalid(cum_total)
+
+        plt.fill_between(dates, cum_total_no_nan, alpha=0.2)
 
         plt.title(self.__fig_title('Total lines of code over time'))
         plt.ylabel('Lines')

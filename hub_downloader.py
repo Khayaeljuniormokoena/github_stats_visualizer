@@ -7,6 +7,7 @@ from shutil import rmtree
 import numpy as np
 import matplotlib.pyplot as plt
 from my_exceptions_module import NotFoundError, ApiRateLimitError, BadCredentialsError
+import pandas as pd
 
 
 class Downloader:
@@ -155,6 +156,7 @@ class Downloader:
 
     def get_code_frequency_statistic(self):
         '''Returns a weekly aggregate of the number of additions and deletions pushed to the repository.'''
+
         if self.__useCache and self.__is_cache_available('code_frequency'):
             return self.__read_cache('code_frequency')
 
@@ -162,9 +164,13 @@ class Downloader:
 
         code_frequency = DataFrame(
             data, columns=['week_unix_ts', 'additions', 'deletions'])
-        code_frequency['date'] = code_frequency.apply(
-            lambda row: datetime.fromtimestamp(row.week_unix_ts).date(),
-            axis=1)
+    
+        # Convert 'week_unix_ts' to datetime format and extract date
+        code_frequency['date'] = pd.to_datetime(code_frequency['week_unix_ts'], unit='s').dt.date
+
+        # Drop 'week_unix_ts' column
+        code_frequency.drop(columns=['week_unix_ts'], inplace=True)
+
         self.__save_cache(code_frequency, 'code_frequency')
 
         return code_frequency
