@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Charts for {{ owner }}/{{ repo }}</title>
+    </head>
+<body>
+	<h1>Charts for {{ owner }}/{{ repo }}</h1>
+	<img src="{{ url_for('static', filename='images/lines_over_time.png') }}" alt="Lines Over Time">
+	<img src="{{ url_for('static', filename='images/additions_deletions_over_time.png') }}" alt="Additions and Deletions Over Time">
+	<img src="{{ url_for('static', filename='images/commits_by_author.png') }}" alt="Commits by Author">
+	<img src="{{ url_for('static', filename='images/number_of_stars_over_time.png') }}" alt="Number of Stars Over Time">
+	<img src="{{ url_for('static', filename='images/new_stars_by_month.png') }}" alt="New Stars by Month">
+	<img src="{{ url_for('static', filename='images/commit_activity.png') }}" alt="Commit Activity">
+    </body>
+</html>

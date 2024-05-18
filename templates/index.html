@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GitHub Repo Stats</title>
+    </head>
+<body>
+	<h1>GitHub Repository Statistics</h1>
+	<form action="/generate" method="POST">
+		<label for="owner">Owner:</label>
+		<input type="text" id="owner" name="owner" required><br>
+		<label for="repo">Repository:</label>
+		<input type="text" id="repo" name="repo" required><br>
+		<input type="submit" value="Generate Charts">
+	</form>
+    </body>
+</html>

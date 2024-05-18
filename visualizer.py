@@ -44,7 +44,7 @@ class Visualizer:
         # Replace NaN values with zero before filling
         cum_total_masked = np.ma.masked_invalid(cum_total)
 
-        plt.fill_between(dates, cum_total_no_nan, alpha=0.2)
+        plt.fill_between(dates, cum_total_masked, alpha=0.2)
 
         plt.title(self.__fig_title('Total lines of code over time'))
         plt.ylabel('Lines')
@@ -116,8 +116,7 @@ class Visualizer:
         stargazers = self.__downloader.get_stargazers()
 
         # parsing data
-        stargazers_by_day = stargazers.groupby('starred_at',
-                                               as_index=False).count()
+        stargazers_by_day = stargazers.groupby('starred_at', as_index=False).count()
         stargazers_by_day.columns = ['date', 'stargazer_count']
 
         # aggregating by weeks
@@ -129,8 +128,7 @@ class Visualizer:
         # reset index without specifying the 'date' column
         stargazers_by_week.reset_index(drop=True, inplace=True)
 
-        stargazers_by_day['cum_stargazers'] = stargazers_by_day[
-            'stargazer_count'].cumsum()
+        stargazers_by_day['cum_stargazers'] = stargazers_by_day['stargazer_count'].cumsum()
 
         cum_stargazers = stargazers_by_day['cum_stargazers'].to_numpy()
         dates = stargazers_by_day['date'].to_numpy()
@@ -161,20 +159,14 @@ class Visualizer:
         commit_activity = self.__downloader.get_commit_activity()
 
         # parsing data
-        grid = commit_activity[[
-            'mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'
-        ]].to_numpy()
+        grid = commit_activity[['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']].to_numpy()
         grid = np.rot90(grid)
 
         # commit activity in the last year - mesh/grid plot
         fig, ax = plt.subplots(1, 1, figsize=(20, 3))
 
         # plotting the grid itself and the colorbar next to it
-        c = ax.pcolor(grid,
-                      cmap='Blues',
-                      edgecolor="lightgray",
-                      vmin=0,
-                      vmax=max(1, np.max(grid)))
+        c = ax.pcolor(grid, cmap='Blues', edgecolor="lightgray", vmin=0, vmax=max(1, np.max(grid)))
         cbar = fig.colorbar(c, ax=ax)
         cbar.ax.set_ylabel('Number of commits')
 
